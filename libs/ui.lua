@@ -2668,6 +2668,7 @@ do
             if typeof(tbl) == "table" then
                 multibox.current = tbl
                 multibox_value.Text =  multibox:Serialize(multibox:Resort(multibox.current, options))
+                callback(multibox.current)
             end
         end
         --
