@@ -2433,6 +2433,7 @@ do
             if typeof(value) == "string" and table.find(options, value) then
                 dropdown.current = value
                 dropdown_value.Text = value
+                callback(dropdown.current)
             end
         end
         --
