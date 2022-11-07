@@ -3,7 +3,6 @@ local Util = {}
 Util.Version = "1.0.0"
 
 function Util.GetCorners(part)
-	print(part)
 	local cf = part.CFrame
 	local size = part.Size
 	local corners = {}
