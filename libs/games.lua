@@ -25,4 +25,31 @@ return {
 			return player.TeamC.Value
 		end,
 	},
+	["292439477"] = {
+		GetCharacter = function(Target)
+			local shared = getrenv().shared
+			local replication = shared.require("ReplicationInterface")
+
+			local TargetCharacter = nil
+
+			replication.operateOnAllEntries(function(player, entry)
+				if player.Name == Target.Name then
+					local character = entry and entry._thirdPersonObject
+					TargetCharacter = character and character._character
+				end
+			end)
+			return TargetCharacter
+		end,
+		GetRootPart = function(TargetCharacter)
+			return TargetCharacter:FindFirstChild("Torso")
+		end,
+		GetPlayerRootPart = function(Player)
+			if Player.Character then
+				return Player.Character:FindFirstChild("Torso")
+			end
+		end,
+		GetRigType = function()
+			return "R6"
+		end
+	},
 }
