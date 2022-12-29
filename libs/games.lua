@@ -25,7 +25,7 @@ return {
 			return player.TeamC.Value
 		end,
 	},
-	["292439477"] = {
+	--[[ ["292439477"] = {
 		GetCharacter = function(Target)
 			local shared = getrenv().shared
 			local replication = shared.require("ReplicationInterface")
@@ -51,5 +51,5 @@ return {
 		GetRigType = function()
 			return "R6"
 		end
-	},
+	}, ]]
 }
