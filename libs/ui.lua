@@ -1409,7 +1409,7 @@ do
             Visible = page.open
         }, section.visibleContent)
         --
-        utility:LoadImage(toggle__gradient, "gradient", "https://i.imgur.com/5hmlrjX.png")
+        utility:LoadImage(toggle__gradient, "gradient", "https://i.imgur.com/wpDRqVH.png")
         --
         function toggle:Get()
             return toggle.current
